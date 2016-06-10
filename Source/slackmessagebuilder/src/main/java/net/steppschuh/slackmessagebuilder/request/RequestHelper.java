@@ -17,8 +17,6 @@ public class RequestHelper {
         conn.setRequestMethod("POST");
         conn.setRequestProperty("Content-Type", "application/json");
 
-        System.out.println(payload);
-
         OutputStream os = conn.getOutputStream();
         os.write(payload.getBytes(DEFAULT_ENCODING));
         os.flush();

@@ -1,38 +1,38 @@
-package net.steppschuh.slackmessagebuilder;
+package net.steppschuh.slackmessagebuilder.message;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SlackMessageBuilder {
+public class MessageBuilder {
 
     private String channel;
     private String text;
     private String username;
     private String icon_url;
     private String icon_emoji;
-    private List<SlackMessageAttachment> attachments;
+    private List<MessageAttachment> attachments;
 
-    public SlackMessageBuilder() {
+    public MessageBuilder() {
     }
 
-    public SlackMessageBuilder(String text) {
+    public MessageBuilder(String text) {
         this.text = text;
     }
 
-    public SlackMessageBuilder(String channel, String text) {
+    public MessageBuilder(String channel, String text) {
         this.channel = channel;
         this.text = text;
     }
 
-    public SlackMessage build() {
-        return new SlackMessage(this);
+    public Message build() {
+        return new Message(this);
     }
 
     public String getChannel() {
         return channel;
     }
 
-    public SlackMessageBuilder setChannel(String channel) {
+    public MessageBuilder setChannel(String channel) {
         this.channel = channel;
         return this;
     }
@@ -41,7 +41,7 @@ public class SlackMessageBuilder {
         return text;
     }
 
-    public SlackMessageBuilder setText(String text) {
+    public MessageBuilder setText(String text) {
         this.text = text;
         return this;
     }
@@ -50,39 +50,39 @@ public class SlackMessageBuilder {
         return username;
     }
 
-    public SlackMessageBuilder setUsername(String username) {
+    public MessageBuilder setUsername(String username) {
         this.username = username;
         return this;
     }
 
-    public String getIcon_url() {
+    public String getIconUrl() {
         return icon_url;
     }
 
-    public SlackMessageBuilder setIcon_url(String icon_url) {
+    public MessageBuilder setIconUrl(String icon_url) {
         this.icon_url = icon_url;
         return this;
     }
 
-    public String getIcon_emoji() {
+    public String getIconEmoji() {
         return icon_emoji;
     }
 
-    public SlackMessageBuilder setIcon_emoji(String icon_emoji) {
+    public MessageBuilder setIconEmoji(String icon_emoji) {
         this.icon_emoji = icon_emoji;
         return this;
     }
 
-    public List<SlackMessageAttachment> getAttachments() {
+    public List<MessageAttachment> getAttachments() {
         return attachments;
     }
 
-    public SlackMessageBuilder setAttachments(List<SlackMessageAttachment> attachments) {
+    public MessageBuilder setAttachments(List<MessageAttachment> attachments) {
         this.attachments = attachments;
         return this;
     }
 
-    public SlackMessageBuilder addAttachment(SlackMessageAttachment attachment) {
+    public MessageBuilder addAttachment(MessageAttachment attachment) {
         if (attachments == null) {
             attachments = new ArrayList<>();
         }
