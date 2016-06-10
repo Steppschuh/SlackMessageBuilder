@@ -1,9 +1,9 @@
-package net.steppschuh.slackmessagebuilder.message;
+package net.steppschuh.slackmessagebuilder.message.attachment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessageAttachmentBuilder {
+public class AttachmentBuilder {
 
     private String title;
     private String titleLink;
@@ -22,20 +22,20 @@ public class MessageAttachmentBuilder {
     private String footer;
     private String footerIcon;
 
-    private List<MessageAttachmentField> fields;
+    private List<AttachmentField> fields;
 
-    public MessageAttachmentBuilder() {
+    public AttachmentBuilder() {
     }
 
-    public MessageAttachment build() {
-        return new MessageAttachment(this);
+    public Attachment build() {
+        return new Attachment(this);
     }
 
     public String getTitle() {
         return title;
     }
 
-    public MessageAttachmentBuilder setTitle(String title) {
+    public AttachmentBuilder setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -44,7 +44,7 @@ public class MessageAttachmentBuilder {
         return titleLink;
     }
 
-    public MessageAttachmentBuilder setTitleLink(String titleLink) {
+    public AttachmentBuilder setTitleLink(String titleLink) {
         this.titleLink = titleLink;
         return this;
     }
@@ -53,7 +53,7 @@ public class MessageAttachmentBuilder {
         return text;
     }
 
-    public MessageAttachmentBuilder setText(String text) {
+    public AttachmentBuilder setText(String text) {
         this.text = text;
         return this;
     }
@@ -62,7 +62,7 @@ public class MessageAttachmentBuilder {
         return pretext;
     }
 
-    public MessageAttachmentBuilder setPretext(String pretext) {
+    public AttachmentBuilder setPretext(String pretext) {
         this.pretext = pretext;
         return this;
     }
@@ -71,7 +71,7 @@ public class MessageAttachmentBuilder {
         return color;
     }
 
-    public MessageAttachmentBuilder setColor(String color) {
+    public AttachmentBuilder setColor(String color) {
         this.color = color;
         return this;
     }
@@ -80,7 +80,7 @@ public class MessageAttachmentBuilder {
         return fallback;
     }
 
-    public MessageAttachmentBuilder setFallback(String fallback) {
+    public AttachmentBuilder setFallback(String fallback) {
         this.fallback = fallback;
         return this;
     }
@@ -89,7 +89,7 @@ public class MessageAttachmentBuilder {
         return authorName;
     }
 
-    public MessageAttachmentBuilder setAuthorName(String authorName) {
+    public AttachmentBuilder setAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
     }
@@ -98,7 +98,7 @@ public class MessageAttachmentBuilder {
         return authorLink;
     }
 
-    public MessageAttachmentBuilder setAuthorLink(String authorLink) {
+    public AttachmentBuilder setAuthorLink(String authorLink) {
         this.authorLink = authorLink;
         return this;
     }
@@ -107,7 +107,7 @@ public class MessageAttachmentBuilder {
         return authorIcon;
     }
 
-    public MessageAttachmentBuilder setAuthorIcon(String authorIcon) {
+    public AttachmentBuilder setAuthorIcon(String authorIcon) {
         this.authorIcon = authorIcon;
         return this;
     }
@@ -116,7 +116,7 @@ public class MessageAttachmentBuilder {
         return imageUrl;
     }
 
-    public MessageAttachmentBuilder setImageUrl(String imageUrl) {
+    public AttachmentBuilder setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
@@ -125,7 +125,7 @@ public class MessageAttachmentBuilder {
         return thumbUrl;
     }
 
-    public MessageAttachmentBuilder setThumbUrl(String thumbUrl) {
+    public AttachmentBuilder setThumbUrl(String thumbUrl) {
         this.thumbUrl = thumbUrl;
         return this;
     }
@@ -134,7 +134,7 @@ public class MessageAttachmentBuilder {
         return footer;
     }
 
-    public MessageAttachmentBuilder setFooter(String footer) {
+    public AttachmentBuilder setFooter(String footer) {
         this.footer = footer;
         return this;
     }
@@ -143,21 +143,21 @@ public class MessageAttachmentBuilder {
         return footerIcon;
     }
 
-    public MessageAttachmentBuilder setFooterIcon(String footerIcon) {
+    public AttachmentBuilder setFooterIcon(String footerIcon) {
         this.footerIcon = footerIcon;
         return this;
     }
 
-    public List<MessageAttachmentField> getFields() {
+    public List<AttachmentField> getFields() {
         return fields;
     }
 
-    public MessageAttachmentBuilder setFields(List<MessageAttachmentField> fields) {
+    public AttachmentBuilder setFields(List<AttachmentField> fields) {
         this.fields = fields;
         return this;
     }
 
-    public MessageAttachmentBuilder addField(MessageAttachmentField field) {
+    public AttachmentBuilder addField(AttachmentField field) {
         if (fields == null) {
             fields = new ArrayList<>();
         }

@@ -1,8 +1,8 @@
 package net.steppschuh.slackmessagebuilder;
 
-import net.steppschuh.slackmessagebuilder.message.MessageAttachment;
-import net.steppschuh.slackmessagebuilder.message.MessageAttachmentBuilder;
-import net.steppschuh.slackmessagebuilder.message.MessageAttachmentField;
+import net.steppschuh.slackmessagebuilder.message.attachment.Attachment;
+import net.steppschuh.slackmessagebuilder.message.attachment.AttachmentBuilder;
+import net.steppschuh.slackmessagebuilder.message.attachment.AttachmentField;
 import net.steppschuh.slackmessagebuilder.message.MessageBuilder;
 import net.steppschuh.slackmessagebuilder.message.MessageLink;
 import net.steppschuh.slackmessagebuilder.request.Webhook;
@@ -25,7 +25,7 @@ public class MessageBuilderUnitTest {
                 .setChannel("#random")
                 .setUsername("Slack Message Builder")
                 .setIconEmoji(":+1:")
-                .setText("I'm the message text with a link to a " + gitHubLink);
+                .setText("I'm the message text with a link to a " + gitHubLink + " :octocat:");
 
         // add some attachments
         int attachmentCount = 3;
@@ -37,13 +37,13 @@ public class MessageBuilderUnitTest {
         webhook.postMessageSynchronous(messageBuilder.build());
     }
 
-    public static MessageAttachment generateMessageAttachment(int index) {
-        MessageAttachmentBuilder attachmentBuilder = new MessageAttachmentBuilder()
+    public static Attachment generateMessageAttachment(int index) {
+        AttachmentBuilder attachmentBuilder = new AttachmentBuilder()
                 .setTitle("Attachment #" + index)
                 .setText("This is the main text in message attachment " + index + ", and can contain standard message markup.")
                 .setColor(getHexCode(index))
-                .addField(new MessageAttachmentField("User", System.getProperty("user.name")))
-                .addField(new MessageAttachmentField("Index", String.valueOf(index)))
+                .addField(new AttachmentField("User", System.getProperty("user.name")))
+                .addField(new AttachmentField("Index", String.valueOf(index)))
                 .setFooter("Created by " + MessageBuilderUnitTest.class.getSimpleName());
 
         return attachmentBuilder.build();

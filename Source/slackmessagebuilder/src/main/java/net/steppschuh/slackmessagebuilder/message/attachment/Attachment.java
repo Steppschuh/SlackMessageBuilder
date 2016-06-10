@@ -1,11 +1,11 @@
-package net.steppschuh.slackmessagebuilder.message;
+package net.steppschuh.slackmessagebuilder.message.attachment;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class MessageAttachment implements Serializable {
+public class Attachment implements Serializable {
 
     public static final String COLOR_GOOD = "good";
     public static final String COLOR_WARNING = "warning";
@@ -35,26 +35,26 @@ public class MessageAttachment implements Serializable {
     @SerializedName("footer_icon")
     private String footerIcon;
 
-    private List<MessageAttachmentField> fields;
+    private List<AttachmentField> fields;
 
-    public MessageAttachment() {
+    public Attachment() {
     }
 
-    public MessageAttachment(MessageAttachmentBuilder messageAttachmentBuilder) {
-        this.title = messageAttachmentBuilder.getTitle();
-        this.titleLink = messageAttachmentBuilder.getTitleLink();
-        this.text = messageAttachmentBuilder.getText();
-        this.pretext = messageAttachmentBuilder.getPretext();
-        this.color = messageAttachmentBuilder.getColor();
-        this.fallback = messageAttachmentBuilder.getFallback();
-        this.authorName = messageAttachmentBuilder.getAuthorName();
-        this.authorLink = messageAttachmentBuilder.getAuthorLink();
-        this.authorIcon = messageAttachmentBuilder.getAuthorIcon();
-        this.imageUrl = messageAttachmentBuilder.getImageUrl();
-        this.thumbUrl = messageAttachmentBuilder.getThumbUrl();
-        this.footer = messageAttachmentBuilder.getFooter();
-        this.footerIcon = messageAttachmentBuilder.getFooterIcon();
-        this.fields = messageAttachmentBuilder.getFields();
+    public Attachment(AttachmentBuilder attachmentBuilder) {
+        this.title = attachmentBuilder.getTitle();
+        this.titleLink = attachmentBuilder.getTitleLink();
+        this.text = attachmentBuilder.getText();
+        this.pretext = attachmentBuilder.getPretext();
+        this.color = attachmentBuilder.getColor();
+        this.fallback = attachmentBuilder.getFallback();
+        this.authorName = attachmentBuilder.getAuthorName();
+        this.authorLink = attachmentBuilder.getAuthorLink();
+        this.authorIcon = attachmentBuilder.getAuthorIcon();
+        this.imageUrl = attachmentBuilder.getImageUrl();
+        this.thumbUrl = attachmentBuilder.getThumbUrl();
+        this.footer = attachmentBuilder.getFooter();
+        this.footerIcon = attachmentBuilder.getFooterIcon();
+        this.fields = attachmentBuilder.getFields();
     }
 
     public String getTitle() {
@@ -161,11 +161,11 @@ public class MessageAttachment implements Serializable {
         this.footerIcon = footerIcon;
     }
 
-    public List<MessageAttachmentField> getFields() {
+    public List<AttachmentField> getFields() {
         return fields;
     }
 
-    public void setFields(List<MessageAttachmentField> fields) {
+    public void setFields(List<AttachmentField> fields) {
         this.fields = fields;
     }
 

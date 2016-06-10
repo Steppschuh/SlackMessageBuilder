@@ -1,5 +1,7 @@
 package net.steppschuh.slackmessagebuilder.message;
 
+import net.steppschuh.slackmessagebuilder.message.attachment.Attachment;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +12,7 @@ public class MessageBuilder {
     private String username;
     private String icon_url;
     private String icon_emoji;
-    private List<MessageAttachment> attachments;
+    private List<Attachment> attachments;
 
     public MessageBuilder() {
     }
@@ -73,16 +75,16 @@ public class MessageBuilder {
         return this;
     }
 
-    public List<MessageAttachment> getAttachments() {
+    public List<Attachment> getAttachments() {
         return attachments;
     }
 
-    public MessageBuilder setAttachments(List<MessageAttachment> attachments) {
+    public MessageBuilder setAttachments(List<Attachment> attachments) {
         this.attachments = attachments;
         return this;
     }
 
-    public MessageBuilder addAttachment(MessageAttachment attachment) {
+    public MessageBuilder addAttachment(Attachment attachment) {
         if (attachments == null) {
             attachments = new ArrayList<>();
         }

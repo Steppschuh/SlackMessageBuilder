@@ -2,6 +2,8 @@ package net.steppschuh.slackmessagebuilder.message;
 
 import com.google.gson.annotations.SerializedName;
 
+import net.steppschuh.slackmessagebuilder.message.attachment.Attachment;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -14,7 +16,7 @@ public class Message implements Serializable {
     private String iconUrl;
     @SerializedName("icon_emoji")
     private String iconEmoji;
-    private List<MessageAttachment> attachments;
+    private List<Attachment> attachments;
 
     public Message() {
     }
@@ -68,11 +70,11 @@ public class Message implements Serializable {
         this.iconEmoji = iconEmoji;
     }
 
-    public List<MessageAttachment> getAttachments() {
+    public List<Attachment> getAttachments() {
         return attachments;
     }
 
-    public void setAttachments(List<MessageAttachment> attachments) {
+    public void setAttachments(List<Attachment> attachments) {
         this.attachments = attachments;
     }
 

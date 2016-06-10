@@ -1,8 +1,8 @@
-package net.steppschuh.slackmessagebuilder.message;
+package net.steppschuh.slackmessagebuilder.message.attachment;
 
 import com.google.gson.annotations.SerializedName;
 
-public class MessageAttachmentField {
+public class AttachmentField {
 
     private String title;
     private String value;
@@ -10,10 +10,10 @@ public class MessageAttachmentField {
     @SerializedName("short")
     private boolean shortValue;
 
-    public MessageAttachmentField() {
+    public AttachmentField() {
     }
 
-    public MessageAttachmentField(String value, String title) {
+    public AttachmentField(String value, String title) {
         this.value = value;
         this.title = title;
         shortValue = true;
