@@ -22,7 +22,7 @@ public class MessageBuilderUnitTest {
 
         // create a message
         MessageBuilder messageBuilder = new MessageBuilder()
-                .setChannel("#random")
+                .setChannel("#general")
                 .setUsername("Slack Message Builder")
                 .setIconEmoji(":+1:")
                 .setText("I'm the message text with a link to a " + gitHubLink + " :octocat:");
