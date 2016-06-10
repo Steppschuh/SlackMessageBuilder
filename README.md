@@ -1,6 +1,8 @@
 # Slack Message Builder
 This lightweight library can be utilized to generate Slack messages that can be sent to the Slack API via webhooks.
 
+![Screenshot](https://raw.githubusercontent.com/Steppschuh/SlackMessageBuilder/master/Media/example_message_01.jpg)
+
 ## Setup
 #### Get the JAR
 Download the [library](https://github.com/Steppschuh/SlackMessageBuilder/tree/master/Library) and add it to your project.
@@ -10,6 +12,8 @@ Go to the [custom integrations](https://steppschuh.slack.com/apps/build/custom-i
 
 #### Look at the Unit Test
 Check out the example implementation [unit test](https://github.com/Steppschuh/SlackMessageBuilder/blob/master/Source/app/src/test/java/net/steppschuh/slackmessagebuilder/MessageBuilderUnitTest.java). Update the `WebHook URL` and the Slack channel (or it will post to `#general`).
+
+![Screenshot](https://raw.githubusercontent.com/Steppschuh/SlackMessageBuilder/master/Media/example_code_01.jpg)
 
 ## Usage
 #### Create a message
