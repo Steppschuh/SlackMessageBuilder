@@ -47,3 +47,6 @@ You can simply serialize a Message object to a JSON string and send a Post reque
 Webhook webhook = new Webhook(SLACK_WEBHOOK_URL);
 webhook.postMessage(message);
 ```
+
+#### Dependencies
+The serialization depends on [Gson](https://github.com/google/gson).
